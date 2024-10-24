@@ -11,5 +11,3 @@ export class RegistrationConfirmationPage extends BasePage {
     this.confirmationMessage = this.page.getByRole("paragraph");
   }
 }
-
-//should redirect to http://192.168.0.123:8080/polityka-prywatnosci
