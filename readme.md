@@ -112,6 +112,8 @@ Declarative style:
 
     // When
     await registrationFormPage.fillFormWithValidData();
+    await registrationFormPage.acceptTermsAndConditions();
+    await registrationFormPage.submitRegistrationForm();
 
     // Then
     await expect

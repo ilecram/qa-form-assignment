@@ -1,3 +1,4 @@
+```gherkin
 Feature: Registration form
     Scenario: User registers with valid data
         Given User is on the registration form page
@@ -20,3 +21,4 @@ Feature: Registration form
         Given User is on the registration form page
         When User opens Privacy Policy link
         Then Privacy Policy is displayed
+```

@@ -68,10 +68,12 @@ export class RegistrationFormPage extends BasePage {
     await this.birthDate.fill(validRegistrationFormData.birthDate);
     await this.language.selectOption(validRegistrationFormData.language);
     await this.phoneNumber.fill(validRegistrationFormData.phoneNumber);
-    await this.termsAndConditionCheckbox.check();
-    await this.submitButton.click();
+
   }
-  async submitBlankForm(): Promise<void> {
+  async acceptTermsAndConditions(): Promise<void> {
+    await this.termsAndConditionCheckbox.check();
+  }
+  async submitRegistrationForm(): Promise<void> {
     await this.submitButton.click();
   }
 

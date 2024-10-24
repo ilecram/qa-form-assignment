@@ -22,6 +22,8 @@ test.describe("Registration form", () => {
 
     // When
     await registrationFormPage.fillFormWithValidData();
+    await registrationFormPage.acceptTermsAndConditions();
+    await registrationFormPage.submitRegistrationForm();
 
     // Then
     await expect
@@ -47,7 +49,7 @@ test.describe("Registration form", () => {
     await page.goto("/", { waitUntil: "domcontentloaded" });
 
     // When
-    await registrationFormPage.submitBlankForm();
+    await registrationFormPage.submitRegistrationForm();
 
     // Then
     await expect.soft(registrationFormPage.firstNameErrorMessage).toBeVisible();
